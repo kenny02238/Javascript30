@@ -22,8 +22,8 @@
 
 **2. setTimeout 使用方式**
 
-- 語法:setTimeout(fun,延遲毫秒)
-- 只會執行一次,如果需要一直執行需在 fun 內再次呼叫 setTimeout
+- 語法:setTimeout(fun,延遲毫秒);
+- 只會執行一次,如果需要持續執行需在 fun 內再次呼叫 setTimeout
 - 如要停止需要 clearTimeout(setTimeout 的變數名稱)
 
         function foo(){
@@ -35,8 +35,9 @@
 
 **3. setInterval 使用方法**
 
-- 語法:setInterval(function,毫秒)
+- 語法:setInterval(function,毫秒);
 - 所指定的毫秒為每隔多久就執行一次
+- 無法保證執行間隔,如果前一次的函數執行時間較長,則回調有可能意外被執行
 - 如要停止需要 clearInterval(setInterval 的變數名稱)
 
         function foo(){
@@ -45,7 +46,18 @@
         const foobar = setInterval(foo,1000);
         clearInterval(foobar);//停止時輸入
 
-**4. querySelectorAll**
+**4. requestAnimationFrame 使用方法**
 
-- 使用 querySelectorAll 得到的會是一個 NodeList 對象它不是陣列但是可以使用 foreach()方法  
-  而且它是一個靜態的集合
+- 語法: requestAnimationFrame(function);
+- 可與瀏覽器和硬體同步(例如螢幕更新頻率),當螢幕準備好接受下一個畫面更新時回調
+- 如果使用者沒在使用頁面時會停止呼叫,節省系統資源
+- 只會執行一次,如果需要持續執行需在 fun 內再次呼叫 requestAnimationFrame
+- 如要停止需要 cancelAnimationFrame(requestAnimationFrame 的變數名稱)
+
+        function foo(){
+            console.log('bar');
+            requestAnimationFrame(foo);
+        }
+        const foobar = requestAnimationFrame(foo);
+        cancelAnimationFrame(foobar);//停止時輸入
+
