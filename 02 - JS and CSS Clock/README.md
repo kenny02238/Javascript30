@@ -5,7 +5,8 @@
 **1. Date 物件**
 
 - 透過 new Date()可以得到一個當下時間的 Date 物件(可透過 cosole.dir 看物件方法)
-- 可 Date.parse(時間)可指定一個時間,會得到一個根據格林威治標準時間開始累計到指定時間的毫秒數(milliseconds),時間日期字串格式要符合 RFC2822 或 ISO 8601 date 標準，如果是無效的格式會返回 NaN
+- 可 Date.parse(時間)可指定一個時間,會得到一個根據格林威治標準時間開始累計到指定時間的毫秒數(milliseconds)  
+  時間日期字串格式要符合 RFC2822 或 ISO 8601 date 標準，如果是無效的格式會返回 NaN
 - Date 物件有許多方法可以使用
   - getMilliseconds() 取得是幾毫秒 (0-999)
   - getSeconds() 取得是幾秒 (0-59)
@@ -16,7 +17,8 @@
   - getFullYear() 取得是幾年(yyyy)
   - getDay() 取得是星期幾 (0-6)
   - getTime() 取得從 1970-01-01 00:00:00 UTC 累計的毫秒數
-    另外還有許多方法可提供處理時間問題 > [參考資料](https://www.fooish.com/)
+  - 另外還有許多方法可提供處理時間問題
+  - > [參考資料](https://www.fooish.com/)
 
 **2. classList 使用方式**
 
