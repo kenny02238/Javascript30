@@ -20,15 +20,17 @@
   - 另外還有許多方法可提供處理時間問題
   - > [參考資料](https://www.fooish.com/)
 
-**2. classList 使用方式**
+**2. setTimeout 使用方式**
 
-- add 可以增加一個或是多個類名
-- remove 可以刪除一個或是多個類名
-- toggle(class, true|false)
-  - 指定一個類名如有存在則移除該類名 並且返回 false 如果不存在則添加類名 並且返回 true
-  - 第二個參數是可選參數,用來強制添加或是刪除類名 false 強制刪除 true 強制增加
-- contains(class) 返回會是 Boolean 值,判斷該類名是否存在
-- item(index) 返回相對應的類名,索引值從 0 開始 如果在範圍外則返回 null
+- 語法:setTimeout(fun,延遲毫秒)
+- 只會執行一次,如果需要一直執行需在 fun 內再次呼叫 setTimeout
+- 如需停止需要 clearTimeout(setTimeout 的變數名稱)
+  function foo(){
+  console.log('bar');
+  setTimeout(foo,1000);
+  }
+  const foobar = setTimeout(foo,1000);
+  clearTimeout(foobar);
 
 **3. audio 的操作方法**
 
