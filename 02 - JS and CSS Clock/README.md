@@ -24,22 +24,26 @@
 
 - 語法:setTimeout(fun,延遲毫秒)
 - 只會執行一次,如果需要一直執行需在 fun 內再次呼叫 setTimeout
-- 如需停止需要 clearTimeout(setTimeout 的變數名稱)
+- 如要停止需要 clearTimeout(setTimeout 的變數名稱)
 
         function foo(){
             console.log('bar');
             setTimeout(foo,1000);
         }
         const foobar = setTimeout(foo,1000);
-        clearTimeout(foobar);
+        clearTimeout(foobar);//停止時輸入
 
-**3. audio 的操作方法**
+**3. setInterval 使用方法**
 
-- play() 撥放音樂
-- pause() 暫停撥放
-- load() 重新加載
-- canPlayType() 可以播放類型,檢查瀏覽器是否可以播放指定的媒體類型  
-  其餘還有很多 properties(屬性)可提供 JS 操作,尚須多加練習
+- 語法:setInterval(function,毫秒)
+- 所指定的毫秒為每隔多久就執行一次
+- 如要停止需要 clearInterval(setInterval 的變數名稱)
+
+        function foo(){
+            console.log('bar');
+        }
+        const foobar = setInterval(foo,1000);
+        clearInterval(foobar);//停止時輸入
 
 **4. querySelectorAll**
 
