@@ -25,12 +25,13 @@
 - 語法:setTimeout(fun,延遲毫秒)
 - 只會執行一次,如果需要一直執行需在 fun 內再次呼叫 setTimeout
 - 如需停止需要 clearTimeout(setTimeout 的變數名稱)
-  function foo(){
-  console.log('bar');
-  setTimeout(foo,1000);
-  }
-  const foobar = setTimeout(foo,1000);
-  clearTimeout(foobar);
+
+        function foo(){
+            console.log('bar');
+            setTimeout(foo,1000);
+        }
+        const foobar = setTimeout(foo,1000);
+        clearTimeout(foobar);
 
 **3. audio 的操作方法**
 
