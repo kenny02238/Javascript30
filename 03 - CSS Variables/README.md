@@ -3,7 +3,7 @@
 ## 解題流程:
 
 **1. 利用 querySelectorAll 取出所有 input**<br>
-**2. 利用 forEach()對每個 input 監聽 change 和 mousemove 事件<br>並用 handleChange 方法處理**<br>
+**2. 利用 forEach()對每個 input 監聽 change 和 mousemove 事件,並用 handleChange 方法處理**<br>
 **3. 利用 querySelector 取出:root 樣式 並用 style.setProperty 改變其樣式值**<br>
 
 ## 學習重點:
