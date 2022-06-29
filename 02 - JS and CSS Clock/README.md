@@ -1,5 +1,14 @@
 # day1 JavaScript Drum Kit
 
+## 解題流程:
+
+**1. 重置題目中的 css**
+**2. 利用 querySelector 取出秒針 分針 時針**
+**3. 利用 new Date()得到現在時間**
+**4. 處理時間相對應的角度(deg)**
+**5. 利用 style.transform(rotate)改變角度**
+**6. 利用 requestAnimationFrame 設定每秒更新畫面**
+
 ## 學習重點:
 
 **1. Date 物件**
@@ -60,4 +69,3 @@
         }
         const foobar = requestAnimationFrame(foo);
         cancelAnimationFrame(foobar);//停止時輸入
-

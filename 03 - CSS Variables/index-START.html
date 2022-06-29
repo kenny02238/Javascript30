@@ -21,7 +21,21 @@
   <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
 
   <style>
+    :root {
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 10px;
+    }
 
+    img {
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
+
+    .hl {
+      color: var(--base);
+    }
     /*
       misc styles, nothing to do with CSS variables
     */
@@ -45,6 +59,25 @@
   </style>
 
   <script>
+    ;{
+      // 取出來的會是Nodelist(array-like)
+      let inputs = document.querySelectorAll('.controls input');
+      
+      // 如果使用箭頭函式this會指向window
+      // 一般函式現在指向input 因為input呼叫此函式
+      function handleChange(){
+        // 看樣式是否需要加入data-sizing 沒有的話就是空
+        const suffix = this.dataset.sizing || '';
+        document.querySelector(':root').style.setProperty(`--${this.name}`,this.value + suffix);
+        
+      }
+
+      // 處理input change和mousemove兩個監聽事件
+      // addEventListenerd可以監聽所有dom事件
+      inputs.forEach((input)=>{input.addEventListener('change',handleChange)});
+      inputs.forEach((input)=>{input.addEventListener('mousemove',handleChange)});
+
+    }
   </script>
 
 </body>
