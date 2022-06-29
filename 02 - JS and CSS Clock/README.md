@@ -1,4 +1,4 @@
-# day1 JavaScript Drum Kit
+# day02 - JS and CSS Clock
 
 ## 解題流程:
 

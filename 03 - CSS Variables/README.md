@@ -1,4 +1,4 @@
-# day1 JavaScript Drum Kit
+# day03 - CSS Variables
 
 ## 解題流程:
 
