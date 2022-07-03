@@ -4,7 +4,7 @@
 
 **1. 針對 css 調整 flex 和一些變動效果**<br>
 **2. 利用 querySelectorAll 取出所有 .panel**<br>
-**3. 利用 forEach()對每個 panel 監聽 click 和 transitionend 事件<br>並用 handleClick 方法和 handleTransitionend 方法處理**<br>
+**3. 利用 forEach()對每個 panel 監聽 click 和 transitionend 事件<br> 並用 handleClick 方法和 handleTransitionend 方法處理**<br>
 **4. 在 Click 事件利用 toggle 加上 open 的 classname**<br>
 **5. 在 transitionend 事件利用 toggle 加上/刪除 open-active 的 classname**<br>
 
@@ -74,7 +74,7 @@
   - 若設置兩個值,第一個必須沒有單位,被視為 flex-grow<br>第二個值若無單位則視為 flex-shrink<br>第二個值若有單位則視為 flex-basis
   - 若設定為三個值,則依序為 flex-grow,flex-shrink,flex-basis
 
-  **2. classList 和 className**
+**2. classList 和 className**
 
 - element.classList 取到的會是 DOMTokenList(類似陣列但不是)有許多方法可用<br>以下列出目前常用的方法
 

@@ -14,7 +14,7 @@
 - array(選擇性): 呼叫 filter 方法的陣列
 - thisArg(選擇性): 執行 callback 回呼函式的 this 值
 
-  **2. Array.prototype.map()**
+**2. Array.prototype.map()**
 
 - map()方法會建立一個新的陣列<br> 其內容為原陣列的每一個元素經由回呼函式運算後所回傳的結果之集合
 - 語法:
