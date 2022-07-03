@@ -2,6 +2,9 @@
 
 ## 學習重點:
 
+**延伸內容:經由研究 filter 和 map 延伸出的 call/apply/bindJS 函數方法**<br>
+[可參照部落格文章](https://kenny02238.pixnet.net/blog/post/337424987-%e3%80%90%e5%89%8d%e7%ab%af%e5%b7%a5%e7%a8%8b%e5%b8%ab%e8%bd%89%e8%81%b7%e2%80%93%e7%ad%86%e8%a8%98%e3%80%91%e5%87%bd%e6%95%b8%e5%8e%9f%e5%9e%8b%e4%b8%8a%e7%9a%84call-a)
+
 **1. Array.prototype.filter()**
 
 - filter()會建立一個經指定之函式運算後，由原陣列中通過該函式檢驗之元素所構成的新陣列
