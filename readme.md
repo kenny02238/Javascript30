@@ -6,3 +6,4 @@
 - [Day02 - JS and CSS Clock](https://github.com/kenny02238/Javascript30/tree/gh-pages/02%20-%20JS%20and%20CSS%20Clock)
 - [Day03 - CSS Variables](https://github.com/kenny02238/Javascript30/tree/gh-pages/03%20-%20CSS%20Variables)
 - [Day04 - Array Cardio Day 1](https://github.com/kenny02238/Javascript30/tree/gh-pages/04%20-%20Array%20Cardio%20Day%201)
+- [Day05 - Flex Panel Gallery](https://github.com/kenny02238/Javascript30/tree/gh-pages/05%20-%20Flex%20Panel%20Gallery)
