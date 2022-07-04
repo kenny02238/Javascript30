@@ -26,8 +26,8 @@ h1{
 }
 .item{
     margin: 2% 0;
-    width: 25vw;
-    height:35vh;
+    width: 25vmax;
+    height:35vmin;
     display: flex;
     justify-content: space-evenly;
     flex-flow: column nowrap;
