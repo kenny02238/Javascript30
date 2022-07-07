@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>JS + CSS Clock</title>
-</head>
-<body>
-
-
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS + CSS Clock</title>
+  </head>
+  <body>
     <div class="clock">
       <div class="clock-face">
         <div class="hand hour-hand"></div>
@@ -15,60 +13,121 @@
       </div>
     </div>
 
+    <style>
+      html {
+        background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=5);
+        background-size: cover;
+        font-family: "helvetica neue";
+        text-align: center;
+        font-size: 10px;
+      }
 
-  <style>
-    html {
-      background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5);
-      background-size: cover;
-      font-family: 'helvetica neue';
-      text-align: center;
-      font-size: 10px;
-    }
+      body {
+        margin: 0;
+        font-size: 2rem;
+        display: flex;
+        flex: 1;
+        min-height: 100vh;
+        align-items: center;
+      }
 
-    body {
-      margin: 0;
-      font-size: 2rem;
-      display: flex;
-      flex: 1;
-      min-height: 100vh;
-      align-items: center;
-    }
+      .clock {
+        width: 30rem;
+        height: 30rem;
+        border: 20px solid white;
+        border-radius: 50%;
+        margin: 50px auto;
+        position: relative;
+        padding: 2rem;
+        box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+          inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+      }
 
-    .clock {
-      width: 30rem;
-      height: 30rem;
-      border: 20px solid white;
-      border-radius: 50%;
-      margin: 50px auto;
-      position: relative;
-      padding: 2rem;
-      box-shadow:
-        0 0 0 4px rgba(0,0,0,0.1),
-        inset 0 0 0 3px #EFEFEF,
-        inset 0 0 10px black,
-        0 0 10px rgba(0,0,0,0.2);
-    }
+      .clock-face {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(
+          -3px
+        ); /* account for the height of the clock hands */
+      }
+      .clock-face::before {
+        content: "";
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        border-radius: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+      }
+      .hand {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .hour-hand::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 6px;
+        height: 25%;
+        background: black;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
 
-    .clock-face {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transform: translateY(-3px); /* account for the height of the clock hands */
-    }
+        border-radius: 3px;
+      }
+      .min-hand::after {
+        content: "";
+        width: 4px;
+        height: 35%;
+        background: black;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        border-radius: 2px;
+      }
+      .second-hand::after {
+        content: "";
+        width: 2px;
+        height: 50%;
+        background: black;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        border-radius: 1px;
+      }
+    </style>
 
-    .hand {
-      width: 50%;
-      height: 6px;
-      background: black;
-      position: absolute;
-      top: 50%;
-    }
+    <script>
+      {
+        let hour = document.querySelector(".hour-hand");
+        let min = document.querySelector(".min-hand");
+        let second = document.querySelector(".second-hand");
 
-  </style>
+        let setClockTime = () => {
+          const time = new Date();
+          let currentSecond = time.getSeconds();
+          let currentMin = time.getMinutes();
+          let currentHour = time.getHours();
 
-  <script>
+          let secondDegree = currentSecond * 6;
+          let minDegree = currentMin * 6 + currentSecond * 0.1;
+          let hourDegree =
+            currentHour * 30 + currentMin * 0.5 + (currentSecond * 5) / 600;
+          second.style.transform = `rotate(${secondDegree}deg)`;
+          min.style.transform = `rotate(${minDegree}deg)`;
+          hour.style.transform = `rotate(${hourDegree}deg)`;
+          requestAnimationFrame(setClockTime);
+        };
 
-
-  </script>
-</body>
+        requestAnimationFrame(setClockTime);
+      }
+    </script>
+  </body>
 </html>

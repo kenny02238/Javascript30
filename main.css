@@ -1,14 +1,17 @@
-body,html{
-    margin: 0;
-    padding: 0;
+body,html{ 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url(./annie-spratt-0ZPSX_mQ3xI-unsplash.jpg) ;
+    background-image: url(./background.jpg) ;
 }
 
 *{
     font-family: 'Caveat', cursive;
+    margin: 0;
+    padding: 0;
+}
+header{
+    margin: 3vh;
 }
 h1{
     text-align: center;
@@ -18,42 +21,59 @@ h1{
 .items{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-
 }
 .item{
     margin: 2% 0;
+    width: 25vmax;
+    height:35vmin;
     display: flex;
-    justify-content: center;
-    width: 30%;
-    height: 25vh;
-    
+    justify-content: space-evenly;
+    flex-flow: column nowrap;
+    align-items: center; 
 }
-.item a:hover{
-    transform: scale(1.1);
-    box-shadow: 20px 20px 60px 1px rgba(0,0,0,0.2);
-}
-.item a{
-    transition: 0.5s;
+
+.item .pic{
     overflow: hidden;
-    width: 70%;
-    height: 25vh;
+    height: 75%;
+    width: 80%;
     background-color:rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
     box-shadow: 0 0 60px 5px rgba(0,0,0,0.3);
     border-radius: 3%;
-    text-decoration: none;
+    text-decoration:none;
+    transition: 0.5s;
+    margin-bottom: 2.5%;
+    display: flex;
+    flex-direction: column;
 }
-.item img{
-    height: 18vh;
-    object-fit: cover;
-}
-a div{
+.item .link{
+    height:25%;
+    font-size: 2.5vmin;
+    transition: 0.5s;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vh;
-    height: 7vh;
+    text-decoration:none;
+}
+
+.item .pic img{
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+}
+.item .pic div{
+    height: 30%;
+    font-size: 3vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.item .pic:hover{
+    transform: scale(1.1);
+    box-shadow: 20px 20px 60px 1px rgba(0,0,0,0.2);
+}
+.item .link:hover{
+    transform: scale(1.1);
 }
